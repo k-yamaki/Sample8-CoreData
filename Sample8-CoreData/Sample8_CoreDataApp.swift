@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Sample8_CoreDataApp: App {
+    @State var fileDataList = FileDataArray()
+    let persistenceController = MyPersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(fileDataList: $fileDataList)
+                // 共有のCoreData
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

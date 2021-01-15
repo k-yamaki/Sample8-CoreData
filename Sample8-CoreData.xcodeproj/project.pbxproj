@@ -11,6 +11,9 @@
 		AECE64C225AEDEC3009A39EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE64C125AEDEC3009A39EC /* ContentView.swift */; };
 		AECE64C425AEDEC6009A39EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECE64C325AEDEC6009A39EC /* Assets.xcassets */; };
 		AECE64C725AEDEC6009A39EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECE64C625AEDEC6009A39EC /* Preview Assets.xcassets */; };
+		AECE64D025AEDEF7009A39EC /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE64CF25AEDEF7009A39EC /* TestData.swift */; };
+		AECE64D325AEDF56009A39EC /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE64D225AEDF56009A39EC /* CoreData.swift */; };
+		AECE64E925AEF2DE009A39EC /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AECE64E725AEF2DE009A39EC /* CoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,10 @@
 		AECE64C325AEDEC6009A39EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AECE64C625AEDEC6009A39EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AECE64C825AEDEC6009A39EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AECE64CF25AEDEF7009A39EC /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		AECE64D225AEDF56009A39EC /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		AECE64D525AEDFD7009A39EC /* Sample8-CoreData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sample8-CoreData.entitlements"; sourceTree = "<group>"; };
+		AECE64E825AEF2DE009A39EC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +59,15 @@
 		AECE64BE25AEDEC3009A39EC /* Sample8-CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				AECE64D525AEDFD7009A39EC /* Sample8-CoreData.entitlements */,
 				AECE64BF25AEDEC3009A39EC /* Sample8_CoreDataApp.swift */,
 				AECE64C125AEDEC3009A39EC /* ContentView.swift */,
+				AECE64CF25AEDEF7009A39EC /* TestData.swift */,
+				AECE64D225AEDF56009A39EC /* CoreData.swift */,
 				AECE64C325AEDEC6009A39EC /* Assets.xcassets */,
 				AECE64C825AEDEC6009A39EC /* Info.plist */,
 				AECE64C525AEDEC6009A39EC /* Preview Content */,
+				AECE64E725AEF2DE009A39EC /* CoreData.xcdatamodeld */,
 			);
 			path = "Sample8-CoreData";
 			sourceTree = "<group>";
@@ -138,6 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECE64D325AEDF56009A39EC /* CoreData.swift in Sources */,
+				AECE64D025AEDEF7009A39EC /* TestData.swift in Sources */,
+				AECE64E925AEF2DE009A39EC /* CoreData.xcdatamodeld in Sources */,
 				AECE64C225AEDEC3009A39EC /* ContentView.swift in Sources */,
 				AECE64C025AEDEC3009A39EC /* Sample8_CoreDataApp.swift in Sources */,
 			);
@@ -267,6 +281,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sample8-CoreData/Sample8-CoreData.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Sample8-CoreData/Preview Content\"";
 				DEVELOPMENT_TEAM = ZR3YSQ33BM;
@@ -277,8 +293,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hiroshimamm.keiji.yamaki.Sample8-CoreData";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hiroshimamm.grp-system.Sample8-CoreData";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +307,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sample8-CoreData/Sample8-CoreData.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Sample8-CoreData/Preview Content\"";
 				DEVELOPMENT_TEAM = ZR3YSQ33BM;
@@ -299,8 +319,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hiroshimamm.keiji.yamaki.Sample8-CoreData";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hiroshimamm.grp-system.Sample8-CoreData";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +349,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AECE64E725AEF2DE009A39EC /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AECE64E825AEF2DE009A39EC /* CoreData.xcdatamodel */,
+			);
+			currentVersion = AECE64E825AEF2DE009A39EC /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AECE64B425AEDEC3009A39EC /* Project object */;
 }
