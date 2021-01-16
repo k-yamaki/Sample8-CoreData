@@ -68,10 +68,9 @@ public struct FileData {
         self.storeUuid = entity.uuid!
         self.storeKey = entity.key!
         self.storeUpdate = .done
-        // let testData : TestData = entity.rect
         // 構造体をデコード
-        let testData = try? JSONDecoder().decode(TestData.self, from: entity.rect!)
-        print("testData = \(testData!.rect)")
+        let testData = try? JSONDecoder().decode(TestData.self, from: entity.data!)
+        print("testData = \(testData!.name)")
     }
     // 更新の完了
     public mutating func updateDone() {
@@ -145,13 +144,16 @@ public struct FileDataArray {
                 newItem.uuid = data.uuid
                 newItem.key = data.key
                 // 構造体をエンコードして保存
-                let encoder = JSONEncoder()
+                let encoded = try? JSONEncoder().encode(testData)
+                newItem.data = encoded
+                /*
                 do {
-                    let encoded = try encoder.encode(testData)
-                    newItem.rect = encoded
+                    let encoded = try JSONEncoder().encode(testData)
+                    newItem.data = encoded
                 } catch {
                     print(error.localizedDescription)
                 }
+ */
             case .update:   // 更新
                 // CoreDataからIDでデータを抽出
                 let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "MyEntity")

@@ -21,8 +21,8 @@
         <attribute name="updateFlag" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="MyEntity" representedClassName="MyEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
         <attribute name="key" optional="YES" attributeType="String"/>
-        <attribute name="rect" optional="YES" attributeType="Binary"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <elements>

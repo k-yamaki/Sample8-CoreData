@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-var testData = TestData(name:"aaa", favoriteColor: .white, rect: CGRect(x:10, y:20, width:100, height:50))
-
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Binding var fileDataList : FileDataArray
@@ -25,14 +23,14 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 // 追加
+                /*
                 Button(action: {
-                    
-                    testData = TestData(name:"aaa", favoriteColor: .white, rect: CGRect(x:10, y:20, width:100, height:50))
 
                 }) {
                     Text("画像追加")
                     }
                 Spacer()
+ */
                 // 追加
                 Button(action: {
                     fileDataList.add(key: key)

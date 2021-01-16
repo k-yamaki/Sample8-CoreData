@@ -11,6 +11,8 @@ enum UpdateType {
     case add, update, delete, done
 }
 
+var testData: TestData = TestData(name:"test1", favoriteColor: .white, rect: CGRect(x:10, y:20, width:100, height:50))
+
 struct TestData {
     var name: String
     var favoriteColor: UIColor
