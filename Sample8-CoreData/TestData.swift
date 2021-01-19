@@ -4,14 +4,20 @@
 //
 //  Created by keiji yamaki on 2021/01/13.
 //
-// 更新の種類：
+/*
+ CoreDataの項目に構造体の配列データを保存する方法
+ JSON形式でエンコード、デコードする
+ */
 import SwiftUI
 
 enum UpdateType {
     case add, update, delete, done
 }
 
-var testData: TestData = TestData(name:"test1", favoriteColor: .white, rect: CGRect(x:10, y:20, width:100, height:50))
+var testData: [TestData] = [TestData(name:"test1", favoriteColor: .white, rect: CGRect(x:10, y:20, width:100, height:50)),
+    TestData(name:"test2", favoriteColor: .black, rect: CGRect(x:10, y:20, width:100, height:50)),
+    TestData(name:"test3", favoriteColor: .red, rect: CGRect(x:10, y:20, width:100, height:50))]
+
 
 struct TestData {
     var name: String
@@ -49,24 +55,3 @@ extension TestData: Codable {
     }
     
 }
-/*
-public class TestData : NSObject, NSCoding {
-    var size : String
-    var name : String
-    
-    override init(){
-        self.size :CGSize = .zero
-        self.name = "name"
-    }
-    public func encode(with coder: NSCoder) {
-        coder.encode(self.size, forKey: "size")
-        coder.encode(self.name, forKey: "name")
-    }
-    
-    public required init?(coder: NSCoder) {
-        self.size = coder.decodeObject(forKey: "size") as! String
-        self.name = coder.decodeObject(forKey: "name")
-        favoriteColor = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(colorData) as? UIColor ?? UIColor.black
-    }
-}
-*/

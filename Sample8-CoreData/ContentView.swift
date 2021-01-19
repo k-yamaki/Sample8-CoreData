@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @Binding var fileDataList : FileDataArray
+    @Binding var fileDataList : FileDataArray?
     @State var key : String = ""
     @State var data : String = ""
-
+    @State var dataNumber : String = "" // 追加するデータ数
     
     var body: some View {
         VStack {
+            // 基本機能：CoreDataへの追加、読み込み
             TextField("キーを入力してください", text: $key)
                 .padding()
             Text(data)
@@ -23,37 +24,29 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 // 追加
-                /*
                 Button(action: {
-
-                }) {
-                    Text("画像追加")
-                    }
-                Spacer()
- */
-                // 追加
-                Button(action: {
-                    fileDataList.add(key: key)
-                }) {
-                    Text("追加")
-                    }
+                    fileDataList!.add(key: key)
+                }) { Text("追加") }
                 Spacer()
                 // 読み込み
                 Button(action: {
-                    fileDataList.load(viewContext: viewContext, key: key)
-                    data = fileDataList.getStringData()
-                }) {
-                    Text("読み込み")
-                    }
-                Spacer()
-                // 保存
-                Button(action: {
-                    fileDataList.save(viewContext: viewContext)
-                }) {
-                    Text("保存")
-                    }
+                    fileDataList = FileDataArray(key: key, viewContext: viewContext)
+                    data = fileDataList!.getStringData()
+                }) { Text("読み込み") }
                 Spacer()
             }
+            // 速度調査：重いデータ、軽いデータの読み込み時間
+            HStack {
+                TextField("追加するデータ数を入力してください", text: $dataNumber)
+                    .keyboardType(.numberPad)
+                // 追加
+                Button(action: {
+                    fileDataList!.add(key: key)
+                }) { Text("追加") }
+            }
+        }
+        .onAppear{
+            fileDataList = FileDataArray(viewContext:viewContext)
         }
     }
 }

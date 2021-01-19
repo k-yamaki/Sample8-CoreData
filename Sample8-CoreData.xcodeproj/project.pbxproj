@@ -14,6 +14,7 @@
 		AECE64D025AEDEF7009A39EC /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE64CF25AEDEF7009A39EC /* TestData.swift */; };
 		AECE64D325AEDF56009A39EC /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE64D225AEDF56009A39EC /* CoreData.swift */; };
 		AECE64E925AEF2DE009A39EC /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AECE64E725AEF2DE009A39EC /* CoreData.xcdatamodeld */; };
+		AEE5BC4F25B5401E00E8E10E /* FileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5BC4E25B5401E00E8E10E /* FileData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AECE64D225AEDF56009A39EC /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		AECE64D525AEDFD7009A39EC /* Sample8-CoreData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sample8-CoreData.entitlements"; sourceTree = "<group>"; };
 		AECE64E825AEF2DE009A39EC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		AEE5BC4E25B5401E00E8E10E /* FileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AECE64BF25AEDEC3009A39EC /* Sample8_CoreDataApp.swift */,
 				AECE64C125AEDEC3009A39EC /* ContentView.swift */,
 				AECE64CF25AEDEF7009A39EC /* TestData.swift */,
+				AEE5BC4E25B5401E00E8E10E /* FileData.swift */,
 				AECE64D225AEDF56009A39EC /* CoreData.swift */,
 				AECE64C325AEDEC6009A39EC /* Assets.xcassets */,
 				AECE64C825AEDEC6009A39EC /* Info.plist */,
@@ -154,6 +157,7 @@
 				AECE64E925AEF2DE009A39EC /* CoreData.xcdatamodeld in Sources */,
 				AECE64C225AEDEC3009A39EC /* ContentView.swift in Sources */,
 				AECE64C025AEDEC3009A39EC /* Sample8_CoreDataApp.swift in Sources */,
+				AEE5BC4F25B5401E00E8E10E /* FileData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Sample8_CoreDataApp: App {
-    @State var fileDataList = FileDataArray()
+    @State var fileDataList: FileDataArray?
     let persistenceController = MyPersistenceController.shared
     
     var body: some Scene {

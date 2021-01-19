@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D5042d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="FileFlatPhoto" representedClassName="FileFlatPhoto" syncable="YES" codeGenerationType="class">
-        <attribute name="endMapLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="endMapLogitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="flatPhotoImageList" optional="YES" attributeType="Binary"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="mapImageId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="startMapLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="startupLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="updateFlag" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
-    <entity name="FileMapImage" representedClassName="FileMapImage" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="image" optional="YES" attributeType="Binary"/>
-        <attribute name="imageType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="mapLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="mapLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="updateFlag" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
     <entity name="MyEntity" representedClassName="MyEntity" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="Binary"/>
-        <attribute name="key" optional="YES" attributeType="String"/>
-        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="key" attributeType="String"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="FileFlatPhoto" positionX="-54" positionY="45" width="128" height="164"/>
-        <element name="FileMapImage" positionX="-63" positionY="-18" width="128" height="134"/>
-        <element name="MyEntity" positionX="-54" positionY="81" width="128" height="74"/>
+        <element name="MyEntity" positionX="-283.148681640625" positionY="-2.557769775390625" width="128" height="74"/>
     </elements>
 </model>
